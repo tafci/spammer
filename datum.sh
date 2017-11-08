@@ -4,7 +4,7 @@ echo -n "Naplófájl elérési újta: "
 read FILE
 
 echo -n > tmp
-echo -n > result
+echo -n > out
 
 while read LINE ; do
     YEAR=2017
@@ -50,7 +50,7 @@ while read LINE ; do
     if [ "$ID_NEXT" == "$ID_CURR" ] && [ "$TS_NEXT" == "$TS_CURR" ] ; then 
         CNTR=$((CNTR + 1))
     else 
-        echo $DATE $ID_CURR $CNTR >> result
+        echo $DATE $ID_CURR $CNTR >> out
 
         CNTR=1
         ID_CURR=$ID_NEXT
